@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/textease/static/css/main.dc4d6ff2.css",
+    "main.js": "/textease/static/js/main.84ca3221.js",
+    "static/js/146.b635be59.chunk.js": "/textease/static/js/146.b635be59.chunk.js",
+    "index.html": "/textease/index.html",
+    "main.dc4d6ff2.css.map": "/textease/static/css/main.dc4d6ff2.css.map",
+    "main.84ca3221.js.map": "/textease/static/js/main.84ca3221.js.map",
+    "146.b635be59.chunk.js.map": "/textease/static/js/146.b635be59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.84ca3221.js"
+  ]
+}
