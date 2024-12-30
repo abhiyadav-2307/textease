@@ -97,7 +97,7 @@ export default function TextForm({ heading, showAlert, theme , themeConfig}) {
           <b>Word Count:</b> {text.split(/\s+/).filter((word) => word).length}
         </p>
         <p>
-          <b>Reading Time:</b> {formatTime(Math.ceil(text.split(/\s+/).filter((word) => word).length * 0.4))} minutes
+          <b>Reading Time:</b> {formatTime(Math.ceil(text.split(/\s+/).filter((word) => word).length * 0.4))}
         </p>
       </div>
     );
