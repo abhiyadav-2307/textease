@@ -61,6 +61,7 @@ export default function TextForm({ heading, showAlert, theme , themeConfig}) {
         
         return `rgb(${newR}, ${newG}, ${newB})`;
       };
+      const wordarray = text.split(/\s+/).filter((word) => word);
   
     return (
       <div style={containerStyle}>
@@ -75,29 +76,29 @@ export default function TextForm({ heading, showAlert, theme , themeConfig}) {
           onChange={handleOnChange}
           rows="8"
         ></textarea>
-        <button className="btn btn-primary my-2 mx-1" onClick={handleUppercase}>
+        <button disabled= {wordarray.length===0} className="btn btn-primary my-2 mx-1" onClick={handleUppercase}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-secondary my-2 mx-1" onClick={handleLowercase}>
+        <button disabled= {wordarray.length===0} className="btn btn-secondary my-2 mx-1" onClick={handleLowercase}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-danger my-2 mx-1" onClick={handleClearText}>
+        <button disabled= {wordarray.length===0} className="btn btn-danger my-2 mx-1" onClick={handleClearText}>
           Clear Text
         </button>
-        <button className="btn btn-warning my-2 mx-1" onClick={handleRemoveExtraSpaces}>
+        <button disabled= {wordarray.length===0} className="btn btn-warning my-2 mx-1" onClick={handleRemoveExtraSpaces}>
           Remove Extra Spaces
         </button>
-        <button className="btn btn-success my-2 mx-1" onClick={handleCopyToClipboard}>
+        <button disabled= {wordarray.length===0} className="btn btn-success my-2 mx-1" onClick={handleCopyToClipboard}>
           {copyButtonText}
         </button>
         <p>
           <b>Preview:</b> {text}
         </p>
         <p>
-          <b>Word Count:</b> {text.split(/\s+/).filter((word) => word).length}
+          <b>Word Count:</b> {wordarray.length}
         </p>
         <p>
-          <b>Reading Time:</b> {formatTime(Math.ceil(text.split(/\s+/).filter((word) => word).length * 0.4))}
+          <b>Reading Time:</b> {formatTime(Math.ceil(wordarray.length * 0.4))}
         </p>
       </div>
     );

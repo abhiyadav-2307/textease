@@ -23,10 +23,10 @@ const About = ({ theme, themeConfig }) => {
     <div className="container " style={containerStyle}>
       <h2 className="my-3">About Us</h2>
       <div className="accordion" id="accordionExample">
-        <div className="accordion-item">
+      <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className="accordion-button"
+              className="accordion-button collapsed"
               style={{
                 backgroundColor: newColor(themeConfig[theme].backgroundColor, 0.7),
                 color: themeConfig[theme].color
@@ -34,7 +34,7 @@ const About = ({ theme, themeConfig }) => {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseOne"
             >
               <strong>Feature-Packed Text Area</strong>
